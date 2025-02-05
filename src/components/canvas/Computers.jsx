@@ -21,8 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.4 : 0.75}
-        position={isMobile ? [0, -2, -1.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.45 : 0.65}
+        position={isMobile ? [0, -2.4, -1.2] : [0, -3.0, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -49,11 +49,20 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 3, 5], fov: isMobile ? 35 : 25 }}
-      gl={{ preserveDrawingBuffer: true, powerPreference: "high-performance" }}
-      style={{ height: "100%", width: "100%" }}
-      onCreated={({ gl }) => {
-        gl.physicallyCorrectLights = true;
+      dpr={[1, 2]}
+      camera={{ position: [20, 3, 5], fov: isMobile ? 30 : 25 }}
+      gl={{
+        preserveDrawingBuffer: true,
+        powerPreference: "high-performance",
+        antialias: true,
+      }}
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        height: "100%",
+        width: "100%",
+        touchAction: "none",
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -61,6 +70,7 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enablePan={false}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
