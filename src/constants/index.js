@@ -32,6 +32,10 @@ import {
   kraken,
   sahbeni,
   edelivery,
+  cls,
+  eskills,
+  g2a,
+  jannen,
 } from "../assets";
 
 export const navLinks = [
@@ -177,27 +181,25 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Saif proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Validates foundational knowledge of AWS Cloud, including core services, security, pricing, and best practices. Demonstrates an understanding of cloud concepts and AWS global infrastructure.",
+    name: "AWS Certified Cloud Practitioner (CCP)",
+    image: aws,
+    badge_url:
+      "https://www.credly.com/badges/a4e42628-4a55-4968-ac80-8eafa4fee7cf/linked_in_profile",
   },
   {
     testimonial:
-      "I've never met a developer who truly cares about their clients' success like Saif does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Validates expertise in managing, deploying, and troubleshooting Kubernetes clusters. Covers cluster configuration, networking, security, and workload management for cloud-native applications.",
+    name: "Certified Kubernetes Administrator (CKA)",
+    image: kubernetes,
+    badge_url:
+      "https://www.credly.com/badges/aee15411-98c9-496b-996e-75bd2c7112eb/public_url",
   },
   {
     testimonial:
-      "After Saif optimized our website, our traffic increased by 50%. We can't thank him enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Validates essential Linux system administration skills, including user management, networking, security, and automation. Demonstrates proficiency in managing Red Hat Enterprise Linux (RHEL) environments.",
+    name: "Red Hat Certified System Administrator (RHCSA)",
+    image: redhat,
   },
 ];
 
@@ -264,6 +266,58 @@ const projects = [
     ],
     image: edelivery,
     website_link: "https://edelivery.eskills.agency/",
+  },
+
+  {
+    name: "Eskills",
+    description:
+      "Empowering businesses with a robust WordPress solution, E-SKILLS offers seamless website management, custom development, performance optimization, and secure hosting. Designed for scalability and efficiency, our platform ensures a dynamic online presence tailored to your needs.",
+    tags: [
+      {
+        name: "WordPress",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "phpmyadmin",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: eskills,
+    website_link: "https://www.eskills.agency/",
+  },
+  {
+    name: "Janen",
+    description:
+      "A seamless car rental solution in Tunisia, offering businesses and individuals an effortless way to book vehicles online. Built with WordPress, Janen features an intuitive booking system, secure payments, and fleet management for a hassle-free rental experience.",
+    tags: [
+      {
+        name: "WordPress",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "phpmyadmin",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: jannen,
+    website_link: "https://janenecar.com/",
+  },
+  {
+    name: "cls",
+    description:
+      "A professional IT solutions platform built with WordPress, designed to enhance digital transformation and business connectivity. CLS serves as a vital link between African and European markets, offering custom web development, IT consulting, and software solutions. This project integrates innovative technologies to create a dynamic and scalable online presence.",
+    tags: [
+      {
+        name: "WordPress",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "phpmyadmin",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: cls,
+    website_link: "https://clssolution.com/",
   },
 ];
 

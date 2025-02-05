@@ -40,6 +40,10 @@ import tripguide from "./tripguide.png";
 import kraken from "./kraken.png";
 import sahbeni from "./sahbeni.png";
 import edelivery from "./edelivery.png";
+import cls from "./cls.png";
+import eskills from "./eskills.png";
+import g2a from "./g2a.png";
+import jannen from "./jannen.png";
 
 export {
   logo,
@@ -80,4 +84,8 @@ export {
   kraken,
   sahbeni,
   edelivery,
+  cls,
+  eskills,
+  g2a,
+  jannen,
 };
