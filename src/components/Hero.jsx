@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -44,9 +51,11 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="absolute xs:bottom-0 bottom-0 w-full h-[calc(100vh-200px)]">
-        <ComputersCanvas />
-      </div>
+      {isMounted && (
+        <div className="absolute xs:bottom-0 bottom-0 w-full h-[calc(100vh-200px)]">
+          <ComputersCanvas />
+        </div>
+      )}
     </section>
   );
 };
