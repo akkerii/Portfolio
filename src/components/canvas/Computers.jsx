@@ -21,8 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.45 : 0.65}
-        position={isMobile ? [0, -2.4, -1.2] : [0, -3.0, -1.5]}
+        scale={isMobile ? 0.35 : 0.75}
+        position={isMobile ? [0, -2.0, -1.1] : [0, -3.75, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -33,15 +33,17 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
 
@@ -49,28 +51,15 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: isMobile ? 30 : 25 }}
-      gl={{
-        preserveDrawingBuffer: true,
-        powerPreference: "high-performance",
-        antialias: true,
-      }}
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        height: "100%",
-        width: "100%",
-        touchAction: "none",
-      }}
+      camera={{ position: [20, 3, 5], fov: isMobile ? 35 : 25 }}
+      gl={{ preserveDrawingBuffer: true }}
+      className="w-full h-full"
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          enablePan={false}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
