@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close, github1, linkedin } from "../assets";
+import { logo, menu, close, github1, linkedin, resume } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -64,7 +64,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="hidden sm:flex gap-4">
+          <div className="hidden sm:flex gap-4 items-center">
             <a
               href="https://github.com/akkerii"
               target="_blank"
@@ -88,6 +88,19 @@ const Navbar = () => {
                 alt="linkedin"
                 className="w-full h-full object-contain hover:opacity-80"
               />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-tertiary py-2 px-4 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-opacity-90"
+            >
+              <img
+                src={resume}
+                alt="resume"
+                className="w-5 h-5 object-contain"
+              />
+              Resume
             </a>
           </div>
         </div>
@@ -120,30 +133,45 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-              <div className="flex gap-4 mt-2">
+              <div className="flex flex-col gap-4 mt-2">
+                <div className="flex gap-4">
+                  <a
+                    href="https://github.com/akkerii"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8"
+                  >
+                    <img
+                      src={github1}
+                      alt="github"
+                      className="w-full h-full object-contain hover:opacity-80"
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/saif-allah-chaffar-akkeri-03323725a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8"
+                  >
+                    <img
+                      src={linkedin}
+                      alt="linkedin"
+                      className="w-full h-full object-contain hover:opacity-80"
+                    />
+                  </a>
+                </div>
                 <a
-                  href="https://github.com/akkerii"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8"
+                  className="flex items-center gap-2 bg-tertiary py-2 px-4 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-opacity-90"
                 >
                   <img
-                    src={github1}
-                    alt="github"
-                    className="w-full h-full object-contain hover:opacity-80"
+                    src={resume}
+                    alt="resume"
+                    className="w-5 h-5 object-contain"
                   />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/saif-akkeri/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8"
-                >
-                  <img
-                    src={linkedin}
-                    alt="linkedin"
-                    className="w-full h-full object-contain hover:opacity-80"
-                  />
+                  Resume
                 </a>
               </div>
             </ul>
