@@ -74,6 +74,42 @@ const services = [
 
 const technologies = [
   {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "prometheus",
+    icon: prometheus,
+  },
+  {
+    name: "Grafana",
+    icon: grafana,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
     name: "k8s",
     icon: kubernetes,
   },
