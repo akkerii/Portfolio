@@ -22,12 +22,12 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import aws from "./aws.png";
-import redhat from "./redhat.png";
-import kubernetes from "./k8s.png";
-import jenkins from "./jenkins.png";
-import grafana from "./graphana.png";
-import prometheus from "./promethus.png";
+import aws from "./tech/aws.png";
+import redhat from "./tech/redhat.png";
+import kubernetes from "./tech/kubernetes.png";
+import jenkins from "./tech/jenkins.png";
+import grafana from "./tech/grafana.png";
+import prometheus from "./tech/prometheus.png";
 
 // Project images
 import kraken from "./kraken.png";
