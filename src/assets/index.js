@@ -3,10 +3,12 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import website from "./website.svg";
+import github1 from "./github-1.png";
+import linkedin from "./linkedin-1.png";
+import resume from "./resume.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -44,19 +46,19 @@ import cls from "./cls.png";
 import eskills from "./eskills.png";
 import g2a from "./g2a.png";
 import jannen from "./jannen.png";
-import github1 from "./github-1.png";
-import linkedin from "./linkedin-1.png";
-import resume from "./resume.png";
+
 export {
   logo,
   backend,
   creator,
   mobile,
   web,
-  github,
   menu,
   close,
   website,
+  github1,
+  linkedin,
+  resume,
   css,
   docker,
   figma,
@@ -90,7 +92,4 @@ export {
   eskills,
   g2a,
   jannen,
-  github1,
-  linkedin,
-  resume,
 };
