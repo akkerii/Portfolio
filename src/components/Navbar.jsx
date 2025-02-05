@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu, close, github1, linkedin } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -49,19 +49,48 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+        <div className="flex items-center gap-6">
+          <ul className="list-none hidden sm:flex flex-row gap-10">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hidden sm:flex gap-4">
+            <a
+              href="https://github.com/akkerii"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8"
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
+              <img
+                src={github1}
+                alt="github"
+                className="w-full h-full object-contain hover:opacity-80"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saif-allah-chaffar-akkeri-03323725a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8"
+            >
+              <img
+                src={linkedin}
+                alt="linkedin"
+                className="w-full h-full object-contain hover:opacity-80"
+              />
+            </a>
+          </div>
+        </div>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -91,6 +120,32 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <div className="flex gap-4 mt-2">
+                <a
+                  href="https://github.com/akkerii"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8"
+                >
+                  <img
+                    src={github1}
+                    alt="github"
+                    className="w-full h-full object-contain hover:opacity-80"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/saif-akkeri/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8"
+                >
+                  <img
+                    src={linkedin}
+                    alt="linkedin"
+                    className="w-full h-full object-contain hover:opacity-80"
+                  />
+                </a>
+              </div>
             </ul>
           </div>
         </div>

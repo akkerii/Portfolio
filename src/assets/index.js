@@ -44,7 +44,8 @@ import cls from "./cls.png";
 import eskills from "./eskills.png";
 import g2a from "./g2a.png";
 import jannen from "./jannen.png";
-
+import github1 from "./github-1.png";
+import linkedin from "./linkedin-1.png";
 export {
   logo,
   backend,
@@ -88,4 +89,6 @@ export {
   eskills,
   g2a,
   jannen,
+  github1,
+  linkedin,
 };
