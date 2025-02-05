@@ -102,6 +102,10 @@ const technologies = [
     icon: grafana,
   },
   {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
