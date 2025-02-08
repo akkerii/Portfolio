@@ -19,14 +19,14 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="xs:w-[320px] w-full"
+      className="w-full sm:w-[360px]"
     >
       <Tilt
         tiltMaxAngleX={15}
         tiltMaxAngleY={15}
         scale={1.02}
         transitionSpeed={450}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full"
+        className="bg-tertiary p-5 rounded-2xl w-full h-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -51,9 +51,7 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] min-h-[100px]">
-            {description}
-          </p>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -91,13 +89,15 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-7 mt-20">
+      <div className="mt-20 flex flex-wrap gap-7 px-4">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <div key={`project-${index}`} className="w-full sm:w-[360px] mx-auto">
+            <ProjectCard index={index} {...project} />
+          </div>
         ))}
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");
