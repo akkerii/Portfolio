@@ -19,15 +19,17 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
+import redux from "./redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import aws from "./tech/aws.png";
-import redhat from "./tech/redhat.png";
-import kubernetes from "./tech/kubernetes.png";
-import jenkins from "./tech/jenkins.png";
-import grafana from "./tech/grafana.png";
-import prometheus from "./tech/prometheus.png";
+import redhat from "./redhat.png";
+import kubernetes from "./k8s.png";
+import jenkins from "./jenkins.png";
+import grafana from "./graphana.png";
+import prometheus from "./promethus.png";
+import figma from "./figma.png";
 
 // Project images
 import kraken from "./kraken.png";
@@ -37,6 +39,9 @@ import cls from "./cls.png";
 import eskills from "./eskills.png";
 import g2a from "./g2a.png";
 import jannen from "./jannen.png";
+import carrent from "./carrent.png";
+import jobit from "./jobit.png";
+import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -52,12 +57,14 @@ export {
   resume,
   css,
   docker,
+  figma,
   git,
   html,
   javascript,
   mongodb,
   nodejs,
   reactjs,
+  redux,
   tailwind,
   typescript,
   threejs,
@@ -74,4 +81,7 @@ export {
   eskills,
   g2a,
   jannen,
+  carrent,
+  jobit,
+  tripguide,
 };

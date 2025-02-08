@@ -5,6 +5,9 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close, github1, linkedin, resume } from "../assets";
 
+const RESUME_URL =
+  "https://esprittncom-my.sharepoint.com/:b:/g/personal/saifallah_chaffarakkeri_esprit_tn/EUdZqdEifVFHovbmNrzlvt8BQSfJNtIHjOr2xdtktqtX2Q?e=Sa5neZ";
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -24,6 +27,11 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleResumeClick = (e) => {
+    e.preventDefault();
+    window.open(RESUME_URL, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <nav
@@ -89,10 +97,9 @@ const Navbar = () => {
               />
             </a>
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={RESUME_URL}
               className="flex items-center gap-2 bg-tertiary py-2 px-4 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-opacity-90"
+              onClick={handleResumeClick}
             >
               <img
                 src={resume}
@@ -160,10 +167,9 @@ const Navbar = () => {
                   </a>
                 </div>
                 <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={RESUME_URL}
                   className="flex items-center gap-2 bg-tertiary py-2 px-4 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-opacity-90"
+                  onClick={handleResumeClick}
                 >
                   <img
                     src={resume}

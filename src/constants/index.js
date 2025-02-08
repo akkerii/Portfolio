@@ -15,10 +15,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
@@ -76,58 +72,67 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    id: "html5",
   },
   {
     name: "CSS 3",
     icon: css,
+    id: "css3",
   },
   {
     name: "JavaScript",
     icon: javascript,
+    id: "javascript",
   },
   {
     name: "TypeScript",
     icon: typescript,
+    id: "typescript",
   },
   {
     name: "React JS",
     icon: reactjs,
+    id: "reactjs",
   },
   {
-    name: "prometheus",
+    name: "Prometheus",
     icon: prometheus,
+    id: "prometheus",
   },
   {
     name: "Grafana",
     icon: grafana,
+    id: "grafana",
   },
   {
     name: "MongoDB",
     icon: mongodb,
+    id: "mongodb",
   },
   {
     name: "Node JS",
     icon: nodejs,
+    id: "nodejs",
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "k8s",
+    name: "Kubernetes",
     icon: kubernetes,
+    id: "kubernetes",
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
+    id: "git",
   },
   {
-    name: "redhat",
+    name: "Red Hat",
     icon: redhat,
+    id: "redhat",
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
+    id: "docker",
   },
 ];
 

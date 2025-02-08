@@ -19,7 +19,7 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="w-full sm:w-[360px]"
+      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <Tilt
         tiltMaxAngleX={15}
@@ -51,7 +51,9 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-[14px] min-h-[100px]">
+            {description}
+          </p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -87,7 +89,7 @@ const Works = () => {
         different technologies, and manage projects effectively.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-7 justify-center w-full px-4">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-7xl mx-auto px-4">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
