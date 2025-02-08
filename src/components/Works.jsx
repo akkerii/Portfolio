@@ -19,14 +19,14 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="xs:w-[320px] w-full"
     >
       <Tilt
         tiltMaxAngleX={15}
         tiltMaxAngleY={15}
         scale={1.02}
         transitionSpeed={450}
-        className="bg-tertiary p-5 rounded-2xl w-full h-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -73,28 +73,30 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <div className="mt-20 flex flex-col items-center">
-      <motion.div variants={textVariant()} className="w-full text-center">
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-center`}>My work</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Projects.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center px-4"
-      >
-        Following projects showcases my skills and experience through real-world
-        examples of my work. Each project is briefly described with links to
-        live demos. It reflects my ability to solve complex problems, work with
-        different technologies, and manage projects effectively.
-      </motion.p>
+      <div className="w-full flex">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center mx-auto"
+        >
+          Following projects showcases my skills and experience through
+          real-world examples of my work. Each project is briefly described with
+          links to live demos. It reflects my ability to solve complex problems,
+          work with different technologies, and manage projects effectively.
+        </motion.p>
+      </div>
 
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-7xl mx-auto px-4">
+      <div className="flex flex-wrap justify-center gap-7 mt-20">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
